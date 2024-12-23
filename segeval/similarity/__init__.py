@@ -15,8 +15,11 @@ from segeval.util import __fnc_metric__, SegmentationMetricError
 
 
 SIMILARITY_METRIC_DEFAULTS = dict(METRIC_DEFAULTS)
+#get environment variable
+n_t = int(os.environ.get('BS_SIZE'))
+
 SIMILARITY_METRIC_DEFAULTS.update({
-    'n_t': 2,
+    'n_t': n_t,
     'boundary_types': None,
     'weight': (weight_a, weight_s_scale, weight_t_scale)
 })
