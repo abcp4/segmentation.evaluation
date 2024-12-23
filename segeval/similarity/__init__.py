@@ -12,7 +12,7 @@ from segeval.ml import ConfusionMatrix as cm
 from segeval.format import (BoundaryFormat, boundary_string_from_masses,
                             convert_positions_to_masses, convert_nltk_to_masses)
 from segeval.util import __fnc_metric__, SegmentationMetricError
-
+import os
 
 SIMILARITY_METRIC_DEFAULTS = dict(METRIC_DEFAULTS)
 #get environment variable
